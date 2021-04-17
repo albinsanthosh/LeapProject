@@ -4,8 +4,8 @@ personal_token = 'Your personal token'
 org_dict = {'Misc':{'total_contributions': 0,'unique_contributors': 0, "id": []}}
 
 # Getting all Commits data
-since_date = '2021-01-25'
-until_date = '2021-01-30'
+since_date = '2021-01-15'
+until_date = '2021-01-25'
 repo_name = 'Hashicorp/consul'
 df = pd.DataFrame()
 n = 1
@@ -37,7 +37,7 @@ for commit in data['commit']:
     # For Total contributions, increase the count
     # For unique contributors, if email-id is in list, we will skip his commit i.e. multiple commits
 
-    if company == 'users':
+    if company == 'users'or company =='gmail' or company =='yahoo':
         org_dict['Misc']['total_contributions'] = org_dict['Misc']['total_contributions'] + 1
         if email not in org_dict['Misc']['id']:
             org_dict['Misc']['id'].append(email)  # org id List
