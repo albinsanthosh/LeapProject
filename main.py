@@ -1,11 +1,11 @@
 import requests
 import pandas as pd
-personal_token = 'Your personal token'
+personal_token = 'Your Personal Token'
 org_dict = {'Misc':{'total_contributions': 0,'unique_contributors': 0, "id": []}}
 
 # Getting all Commits data
 since_date = '2021-01-15'
-until_date = '2021-01-25'
+until_date = '2021-01-30'
 repo_name = 'Hashicorp/consul'
 df = pd.DataFrame()
 n = 1
