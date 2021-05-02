@@ -5,6 +5,7 @@ import mysql.connector
 import json
 
 personal_token = 'Your Personal Token'
+HEADER = {'Authorization': f'{personal_token}'}
 
 def lambda_handler(event, context):
     df = pd.DataFrame()
@@ -18,8 +19,8 @@ def lambda_handler(event, context):
     n = 1
     total_commits = 0
     while True:
-        info_url = f'https://api.github.com/repos/{repo_name}/commits?page={n}&per_page=100&access_token={personal_token}&since={since_date}&until={until_date}'
-        commit_info = requests.get(info_url).json()
+        info_url = f'https://api.github.com/repos/{repo_name}/commits?page={n}&per_page=100&since={since_date}&until={until_date}'
+        commit_info = requests.get(info_url, HEADER).json()
         if commit_info:
             no_of_items = len(commit_info)
             print(no_of_items)
