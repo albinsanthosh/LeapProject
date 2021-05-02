@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import date
 import json
 
-personal_token = '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'
+personal_token = 'Your personal token'
 since_date = '2021-02-15'
 until_date = '2021-02-25'
 repo_name = 'Hashicorp/consul'
