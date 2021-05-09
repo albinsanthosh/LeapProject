@@ -4,6 +4,9 @@ This project uses the commits info data from the github api and process to colle
 
 ## Problem Statement
 To create an API Service to fetch the statistics of the contributors of user specified GitHub repositories in the Amazon Web Services Environment.
+
+![](High_level_diagram.png)
+
 We used Python as programming language in the Pycharm and for Lambda function. 
 
 ### Section A) Python
@@ -32,6 +35,6 @@ Services used: AWS Lambda, API Gateway, RDS (Relational Database Service), Cloud
 * Call the API with query parameters.
 
 ## NOTE:
-The main.py is the code which can be run in the pycharm.
-The lambda_function_code.py is the main file for the lambda function without dependencies.
-The Package folder is for uploading to lambda, which is to be zipped & compressed and uploaded to S3.
+* The main.py is the code which can be run in the pycharm.
+* The lambda_function_code.py is the main file for the lambda function without dependencies.
+* The Package folder is for uploading to lambda, which is to be zipped & compressed and uploaded to S3.
